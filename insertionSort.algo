@@ -1,0 +1,15 @@
+PROCEDURE insrtion_sort(VAR tab:ARRAY_OF INTEGER)
+VAR
+    temp,i,j,n:INTEGER
+BEGIN
+    n:=tab.length
+    FOR i FROM 1 TO n-1  DO
+        temp=tab[i]
+        j=i-1
+        WHILE (j >= 0 and temp < tab[j]) DO
+            tab[j+1]=tab[j]
+            j--
+        END_WHILE
+        tab[j+1]=temp
+    END_FOR
+END
